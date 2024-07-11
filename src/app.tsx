@@ -12,16 +12,16 @@ export function App() {
       </header>
       <main className="main">
         <div className="main__area-box area-box">
-          <label htmlFor="phone-number" className="area-box__label">Enter phone number</label>
+          <label htmlFor="phone-number" className="area-box__label">Enter phone number:</label>
           <div className="area-box__input-container">
             <span className="area-box__symbol">+</span>
-            <input type="tel" name="phone-number" id="phone-number" className="area-box__input" />
+            <input type="tel" pattern="[0-9]*" name="phone-number" id="phone-number" className="area-box__input" placeholder="1234567890" />
           </div>
           <div className="area-box__line">
             <hr></hr>
           </div>
           <div className="area-box__message-area">
-            <textarea name="" id="" rows={4} className="area-box__textarea" placeholder="Type your message here"></textarea>
+            <textarea name="text-message" rows={4} className="area-box__textarea" placeholder="Type your message here"></textarea>
           </div>
         </div>
         <div className="main__button-box button-box">
