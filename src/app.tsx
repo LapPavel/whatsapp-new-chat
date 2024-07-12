@@ -1,9 +1,8 @@
-import headerLogo from './assets/favicon.svg'
-import sendIcon from './assets/send.svg'
-import './app.css'
+import headerLogo from './assets/favicon.svg';
+import sendIcon from './assets/send.svg';
+import './app.css';
 
 export function App() {
-
   return (
     <>
       <header className="header">
@@ -12,16 +11,30 @@ export function App() {
       </header>
       <main className="main">
         <div className="main__area-box area-box">
-          <label htmlFor="phone-number" className="area-box__label">Enter phone number:</label>
+          <label htmlFor="phone-number" className="area-box__label">
+            Enter phone number:
+          </label>
           <div className="area-box__input-container">
             <span className="area-box__symbol">+</span>
-            <input type="tel" pattern="[0-9]*" name="phone-number" id="phone-number" className="area-box__input" placeholder="1234567890" />
+            <input
+              type="tel"
+              pattern="[0-9]*"
+              name="phone-number"
+              id="phone-number"
+              className="area-box__input"
+              placeholder="1234567890"
+            />
           </div>
           <div className="area-box__line">
-            <hr></hr>
+            <hr />
           </div>
           <div className="area-box__message-area">
-            <textarea name="text-message" rows={4} className="area-box__textarea" placeholder="Type your message here"></textarea>
+            <textarea
+              name="text-message"
+              rows={4}
+              className="area-box__textarea"
+              placeholder="Type your message here"
+            />
           </div>
         </div>
         <div className="main__button-box button-box">
@@ -32,5 +45,5 @@ export function App() {
         </div>
       </main>
     </>
-  )
+  );
 }
