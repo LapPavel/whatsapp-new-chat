@@ -98,12 +98,26 @@ export function App() {
         <div className="main__qrcode-box qrcode-box">
           {url ? (
             <a href={url} target="_blank" className="qrcode-box__link" rel="noreferrer">
-              Open chat in new window
+              Open chat in WhatsApp
             </a>
           ) : (
             ''
           )}
           <div ref={ref} className="qrcode-box__qrcode" />
+        </div>
+        <div className="main__description-box description-box">
+          <h2 className="description-box__title">What is WhatsApp Click to Chat?</h2>
+          <p className="description-box__text">
+            It's quite inconvenient to add someone to your contacts and then send them a single WhatsApp message.
+            WhatsApp Click to Chat allows you to send WhatsApp messages directly to phone number without saving it in
+            your contacts.
+          </p>
+          <p className="description-box__text">
+            Simply enter the recipient's phone number and (if necessary) the text message you want to send, then tap the
+            'Create link' button. A link will appear that will redirect you to the WhatsApp chat for that number, even
+            if the contact is not saved on your device. You can also scan the QRCode from your phone to be redirected to
+            the app.
+          </p>
         </div>
       </main>
     </>
