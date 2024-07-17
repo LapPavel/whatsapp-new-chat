@@ -35,6 +35,10 @@
   margin-bottom: 1.5rem;
 }
 
+.area-box_error {
+  background-color: #fecaca;
+}
+
 .area-box__input-container {
   display: flex;
 }
@@ -44,11 +48,12 @@
   font-family: inherit;
   font-size: inherit;
   color: #4b5563;
+  background-color: transparent;
   outline: none;
   border: none;
 }
 
-.area-box__line > :first-child {
+.area-box__line> :first-child {
   border: 0;
   border-top: 1px solid #e5e7eb;
 }
@@ -56,6 +61,7 @@
 .area-box__textarea {
   font-family: inherit;
   font-size: inherit;
+  background-color: transparent;
   width: 100%;
   outline: none;
   border: none;
@@ -98,4 +104,16 @@
 
 .button-box__button-icon {
   width: 1rem;
+}
+
+.qrcode-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: .75rem;
+}
+
+.qrcode-box__link {
+  text-decoration: none;
+  color: inherit;
 }
