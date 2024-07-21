@@ -46,7 +46,6 @@ export function App() {
 
   async function onClick() {
     if (phoneNumber && isCorrectNumber) {
-      console.log(phoneNumber);
       setURL(`https://wa.me/${phoneNumber}${messageText ? `?text=${encodeURIComponent(messageText)}` : ''}`);
     }
   }
