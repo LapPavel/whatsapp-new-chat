@@ -38,7 +38,7 @@
   margin-bottom: 1.5rem;
 }
 
-.area-box_error {
+.area-box:has(.area-box__input:invalid) {
   background-color: #fecaca;
 }
 

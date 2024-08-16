@@ -21,15 +21,12 @@ const qrCode = new QRCodeStyling({
 
 export function App() {
   const [phoneNumber, setPhoneNumber] = useState('');
-  const [isCorrectNumber, setIsCorrectNumber] = useState(true);
   const [messageText, setMessageText] = useState('');
   const [url, setURL] = useState('');
   const ref = useRef(null);
 
   function handleChangePhone(event: JSX.TargetedEvent<HTMLInputElement, Event>): void {
-    const value = event.currentTarget.value;
-    setPhoneNumber(value);
-    setIsCorrectNumber(/^\d*$/.test(value));
+    setPhoneNumber(event.currentTarget.value);
   }
 
   function handleChangeMessage(event: JSX.TargetedEvent<HTMLTextAreaElement, Event>): void {
@@ -45,7 +42,7 @@ export function App() {
   }, [url]);
 
   async function onClick() {
-    if (phoneNumber && isCorrectNumber) {
+    if (phoneNumber && /^\d*$/.test(phoneNumber)) {
       setURL(`https://wa.me/${phoneNumber}${messageText ? `?text=${encodeURIComponent(messageText)}` : ''}`);
     }
   }
@@ -57,7 +54,7 @@ export function App() {
         <h1 className="header__title">WhatsApp Click to Chat</h1>
       </header>
       <main className="main">
-        <div className={`main__area-box ${isCorrectNumber ? 'area-box' : 'area-box area-box_error'}`}>
+        <div className="main__area-box area-box">
           <label htmlFor="phone-number" className="area-box__label">
             Enter phone number:
           </label>
