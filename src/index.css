@@ -3,19 +3,6 @@
   --padding-app: 1.25rem;
 }
 
-/* Check adaptability without media */
-/*@media (max-width: 768px) {
-  html {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  html {
-    font-size: 10px;
-  }
-}*/
-
 html {
   font-size: clamp(8px, 2.5vw, 16px);
 }
